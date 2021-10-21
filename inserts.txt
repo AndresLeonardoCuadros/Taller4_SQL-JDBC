@@ -1,0 +1,54 @@
+INSERT INTO UserApp (username,email,password,role) VALUES ('Andres','andreslc@gmail.com','soyelAdmin','official');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Diego','diegos@gmail.com','soyelAdmin','official');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Jorge','Jorgeees@gmail.com','soyelAdmin','official');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Iban','leIbanes@gmail.com','soyelAdmin','official');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Fabian','febianes@gmail.com','soyelAdmin','official');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Julio','julito@yahoo.com','fuego23','owner');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Adolfo','adolteiro@yahoo.com','hielo96','owner');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Aurelio','aurielitosju@yahoo.com','agua62','owner');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Bernarndo','bernarndaito@yahoo.com','aire922','owner');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Camilo','kmilowisto@yahoo.com','tierra528','owner');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Emilio´s Vet','petsEmilio@hotmail.com','mismejoresamigos','Vet');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Lucas´s Vet','Lucatsdog@hotmail.com','compañerosdevida','Vet');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Ana´s Vet','AnaBestPets@hotmail.com','lasmaslindas','Vet');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Mafalda´s Vet','malfaldogscat@hotmail.com','mismejorestravesuras','Vet');
+INSERT INTO UserApp (username,email,password,role) VALUES ('Dayita´s Vet','dayitaZoo@hotmail.com','mismascotas','Vet');
+
+
+
+INSERT INTO Official (username,name) VALUES ('Andres','Andres Cuadros');
+INSERT INTO Official (username,name) VALUES ('Diego','Julio Diego');
+INSERT INTO Official (username,name) VALUES ('Jorge','Dayana Adriana');
+INSERT INTO Official (username,name) VALUES ('Iban','Carlos Jorge');
+INSERT INTO Official (username,name) VALUES ('Fabian','Augusto Iban');
+
+INSERT INTO Owner (username,name,address,neighborhood) VALUES ('Julio','Julio Bruno','carrera 17 #7b-08','Barrios Unidos');
+INSERT INTO Owner (username,name,address,neighborhood) VALUES ('Adolfo','Adolfo César','calle 16 #45-89','Cuidad Jardin');
+INSERT INTO Owner (username,name,address,neighborhood) VALUES ('Aurelio','Aurelio Cristian','carrera 11 #31-56','Usaquen');
+INSERT INTO Owner (username,name,address,neighborhood) VALUES ('Bernarndo','Bernarndo Daniel','transersal 18 # 15-78 Sur','Santa Barbara');
+INSERT INTO Owner (username,name,address,neighborhood) VALUES ('Camilo','Camilo Diego','Carrera 50 # 162-05','Victoria');
+
+INSERT INTO Vet (username,name,address,neighborhood) VALUES ('Emilio´s Vet','Mi Primer Pollito','carrera 52 #8b-29','San Rafael');
+INSERT INTO Vet (username,name,address,neighborhood) VALUES ('Lucas´s Vet','Pet Mordiscos','calle 05 #02A-58','Colina');
+INSERT INTO Vet (username,name,address,neighborhood) VALUES ('Ana´s Vet','Hocicos y colitas','carrera 58 #93-91','Mirador');
+INSERT INTO Vet (username,name,address,neighborhood) VALUES ('Mafalda´s Vet','Pesunas pet','transersal 07 # 71-42 Norte','Santa Inez');
+INSERT INTO Vet (username,name,address,neighborhood) VALUES ('Dayita´s Vet','ZooMedic','Carrera 26 # 168-81','Las quintas');
+
+
+INSERT INTO Pet (name,species,race,size,sex,owner_id) VALUES ('Lila','cat','criolla','mediana','Hembra','Julio');
+INSERT INTO Pet (name,species,race,size,sex,owner_id) VALUES ('Macarena','dog','Fox Terrier','mediana','Hembra','Adolfo');
+INSERT INTO Pet (name,species,race,size,sex,owner_id) VALUES ('Pacha','dog','pincher','pequeña','Hembra','Aurelio');
+INSERT INTO Pet (name,species,race,size,sex,owner_id) VALUES ('Luna','cat','criolla','pequeña','Hembra','Bernarndo');
+INSERT INTO Pet (name,species,race,size,sex,owner_id) VALUES ('Dante','dog','coker','pequeño','Macho','Camilo');
+
+INSERT INTO Visit (created_at,type,description,vet_id,pet_id) VALUES ('2021/04/18','esterilización','Exitosa','Dayita´s Vet','1');
+INSERT INTO Visit (created_at,type,description,vet_id,pet_id) VALUES ('2021/03/02','implantación de microchip','Exitosa','Mafalda´s Vet','3');
+INSERT INTO Visit (created_at,type,description,vet_id,pet_id) VALUES ('2021/05/19','vacunación','Exitosa y se recomiendan visitas para mas vacunas','Ana´s Vet','5');
+INSERT INTO Visit (created_at,type,description,vet_id,pet_id) VALUES ('2021/07/22','desparasitación','Exitosa, se recomienda realizarla de nuevo en 1 año','Lucas´s Vet','2');
+INSERT INTO Visit (created_at,type,description,vet_id,pet_id) VALUES ('2021/01/15','urgencia','Lesión en pata delantera derecha, causada por pelea','Emilio´s Vet','4');
+
+INSERT INTO PetCase (created_at,type,description,pet_id) VALUES ('2021/08/25','pérdida','Fue perdida por el dueño','1');
+INSERT INTO PetCase (created_at,type,description,pet_id) VALUES ('2021/05/12','robo','Fue robada en al dirección del dueño','3');
+INSERT INTO PetCase (created_at,type,description,pet_id) VALUES ('2021/06/20','fallecimiento','Fallecio por complicaciones de salud causadas por su edad','5');
+INSERT INTO PetCase (created_at,type,description,pet_id) VALUES ('2021/04/06','pérdida','Fue perdida a el momento de entregar a el dueño','2');
+INSERT INTO PetCase (created_at,type,description,pet_id) VALUES ('2021/09/09','robo ','fue robada en la dirección de la veterinaria','4');

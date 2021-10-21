@@ -1,0 +1,75 @@
+CREATE TABLE UserApp (
+	username VARCHAR NOT NULL,
+	email VARCHAR NOT NULL,
+	password VARCHAR NOT NULL,
+	role VARCHAR NOT NULL,
+	PRIMARY KEY (username)
+);
+
+CREATE TABLE Owner(
+	person_id SERIAL NOT NULL,
+	username VARCHAR NOT NULL,
+	name VARCHAR NOT NULL,
+	address VARCHAR NOT NULL,
+	neighborhood VARCHAR NOT NULL,
+	PRIMARY KEY (username),
+	FOREIGN KEY (username)
+	    REFERENCES UserApp(username)
+);
+
+CREATE TABLE Vet(
+	username VARCHAR NOT NULL,
+	name VARCHAR NOT NULL,
+	address VARCHAR NOT NULL,
+	neighborhood VARCHAR NOT NULL,
+	PRIMARY KEY (username),
+	FOREIGN KEY (username)
+	    REFERENCES UserApp(username)
+);
+
+CREATE TABLE Official(
+	username VARCHAR NOT NULL,
+	name VARCHAR NOT NULL,
+	PRIMARY KEY (username),
+	FOREIGN KEY (username)
+	    REFERENCES UserApp(username)
+);
+
+CREATE TABLE Pet(
+	pet_id SERIAL NOT NULL,
+	microchip SERIAL NOT NULL,
+	name VARCHAR NOT NULL,
+	species VARCHAR NOT NULL,
+	race VARCHAR NOT NULL,
+	size VARCHAR NOT NULL,
+	sex VARCHAR NOT NULL,
+	owner_id VARCHAR NOT NULL,
+	PRIMARY KEY (pet_id),
+	FOREIGN KEY (owner_id)
+	    REFERENCES Owner(username)
+);
+
+CREATE TABLE Visit(
+	visit_id SERIAL NOT NULL,
+	created_at VARCHAR NOT NULL,
+	type VARCHAR NOT NULL,
+	description VARCHAR NOT NULL,
+	vet_id VARCHAR NOT NULL,
+	pet_id INT NOT NULL,
+	PRIMARY KEY (visit_id),
+	FOREIGN KEY (pet_id)
+	    REFERENCES Pet(pet_id),
+	FOREIGN KEY (vet_id)
+	    REFERENCES Vet (username)
+);
+
+CREATE TABLE PetCase(
+	case_id SERIAL NOT NULL,
+	created_at VARCHAR NOT NULL,
+	type VARCHAR NOT NULL,
+	description VARCHAR NOT NULL,
+	pet_id INT NOT NULL,
+	PRIMARY KEY (case_id),
+	FOREIGN KEY (pet_id)
+	    REFERENCES Pet(pet_id)
+);
